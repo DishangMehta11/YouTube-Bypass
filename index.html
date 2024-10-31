@@ -24,6 +24,7 @@
 			<div class="mb-4 form-group w-75">
 				<label for="url" class="form-label fs-3">Enter URL:</label>
 				<input
+					autofocus
 					type="text"
 					class="form-control"
 					id="url"
@@ -49,30 +50,6 @@
 		<!-- https://youtube.com/watch?v=eV3Ch2lEr9Q -->
 		<!-- https://youtu.be/eV3Ch2lEr9Q -->
 
-		<script>
-			function onClick() {
-				let url = document.getElementById("url").value;
-				document.getElementById("frame").src = url;
-				elements = url.split("/");
-				console.log(elements);
-				const last = elements[elements.length - 1];
-
-				// While sharing the link
-				let actual = "";
-				if (last.startsWith("watch?v=")) {
-					actual = last.slice(8);
-					frame.src = "https://www.youtube.com/embed/" + actual;
-				} else {
-					frame.src = "https://www.youtube.com/embed/" + last;
-				}
-				// console.log("actual --> " + actual);
-				// url = url.split("?si=")[0];
-				// url = url.slice(17);
-				// let frame = document.getElementById("frame");
-				// frame.src = "https://www.youtube.com/embed/" + url;
-
-				// console.log(frame.src);
-			}
-		</script>
+		<script src="script.js" />
 	</body>
 </html>
